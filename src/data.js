@@ -1,19 +1,21 @@
 import data from './data.json'
 
 
-const allCategoriesObject = {}
+const allCategories = {}
 // Get each product
 data.forEach(product => {
   // Get the category name
   let category = product.category
-  // If category does not yet exist then add it to object
-  if (!allCategoriesObject.hasOwnProperty(category)) {
-    allCategoriesObject[category] = true
+
+  // If category exists increase it's count by 1
+  if (allCategories.hasOwnProperty(category)) {
+    allCategories[category] += 1
+    return
   }
+  // If category does not yet exist then add it to object
+  allCategories[category] = 0
 });
 
-// Convert the category object to an array
-const allCategories = Object.keys(allCategoriesObject)
 
 export default data;
 export { allCategories }
