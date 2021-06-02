@@ -11,7 +11,7 @@ function App() {
       <div className="pageTitle">
         <h1>Stuff Mart</h1>
       </div>
-      <CategoryList setCategory={setCategory}></CategoryList>
+      <CategoryList setCategory={setCategory} category={category}></CategoryList>
       <ProductList filter={category} ></ProductList>
     </div>
   );

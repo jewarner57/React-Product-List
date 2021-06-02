@@ -5,8 +5,8 @@
   border: 1px solid gray;
 }
 
-.Category:hover {
-  background-color: rgb(63, 62, 62);
+.selected {
+  background-color: rgb(57, 116, 124);
 }
 
 .catCount {
