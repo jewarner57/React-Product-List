@@ -2,11 +2,12 @@ import data, { categoryCountsObjectArr } from '../../data'
 import Category from '../Category/Category';
 import './CategoryList.css';
 
-function CategoryList() {
+function CategoryList(props) {
   return (
     <div className="CategoryList">
+      <Category key={-1} name="All" count={data.length} setCategory={props.setCategory}></Category>
       {categoryCountsObjectArr.map((category, index) => {
-        return <Category index={index} name={category.name} count={category.count}></Category>
+        return <Category key={index} name={category.name} count={category.count} setCategory={props.setCategory}></Category>
       })}
     </div>
   );
