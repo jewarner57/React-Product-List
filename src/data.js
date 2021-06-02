@@ -22,9 +22,9 @@ const uniqueCategories = Object.keys(categoriesObj)
 const categoriesAndCounts = categoriesObj
 
 // Create an array of category objects with name and count properties
-const categoryCountsObject = uniqueCategories.map((name) => {
+const categoryCountsObjectArr = uniqueCategories.map((name) => {
   return { name: name, count: categoriesAndCounts[name] }
 })
 
 export default data;
-export { allCategories, uniqueCategories, categoriesAndCounts, categoryCountsObject }
+export { allCategories, uniqueCategories, categoriesAndCounts, categoryCountsObjectArr }
