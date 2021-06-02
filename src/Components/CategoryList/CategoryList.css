@@ -1,0 +1,6 @@
+.CategoryList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 60px;
+}

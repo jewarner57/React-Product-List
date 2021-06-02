@@ -1,0 +1,17 @@
+.Category {
+  padding: 15px;
+  color: rgb(228, 228, 228);
+  background-color: rgb(93, 93, 93);
+  border: 1px solid gray;
+}
+
+.Category:hover {
+  background-color: rgb(63, 62, 62);
+}
+
+.catCount {
+  border-radius: 20px;
+  padding: 5px 8px;
+  margin-left: 5px;
+  background-color: rgb(255, 102, 0);
+}
