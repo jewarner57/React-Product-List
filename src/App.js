@@ -1,12 +1,12 @@
-import logo from './logo.svg';
-import CategoryList from './Components/CategoryList/CategoryList'
 import './App.css';
+import CategoryList from './Components/CategoryList/CategoryList'
+import ProductList from './Components/ProductList/ProductList';
 
 function App() {
   return (
     <div className="App">
-      <h1>hello world</h1>
       <CategoryList></CategoryList>
+      <ProductList></ProductList>
     </div>
   );
 }
