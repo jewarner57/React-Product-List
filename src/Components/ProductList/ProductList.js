@@ -6,11 +6,12 @@ function ProductList(props) {
   return (
     <div className="ProductList">
       {data.filter((product) => {
-        for (let category in props.filter) {
-          if (props.filter[category] === product.category || props.filter[category] === 'All') {
-            return product
-          }
+        const { filter } = props
+        // If the product category is in the filter list
+        if (filter.includes(product.category) || filter.includes('All')) {
+          return product
         }
+        return null
       }).map((product, index) => {
         return <Product key={index} name={product.name} price={product.price} category={product.category} ></Product>
       })}

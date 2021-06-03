@@ -2,13 +2,8 @@ import './Category.css';
 
 function isSelected(props) {
   // Because props.category is an object we use forin
-  for (const category in props.category) {
-    if (props.category[category] === props.name) {
-      return 'selected'
-    }
-  }
-
-  return ''
+  const { category, name } = props
+  return category.includes(name) ? 'selected' : ''
 }
 
 function Category(props) {
