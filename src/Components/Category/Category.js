@@ -1,14 +1,11 @@
 import './Category.css';
 
-function isSelected(props) {
-  // Because props.category is an object we use forin
-  const { category, name } = props
-  return category.includes(name) ? 'selected' : ''
-}
-
 function Category(props) {
+  // Is the category currently selected
+  const isSelected = props.category.includes(props.name) ? 'selected' : ''
+
   return (
-    <div className={`Category ${isSelected(props)}`} onClick={() => props.setCategory(props.name)}>
+    <div className={`Category ${isSelected}`} onClick={() => props.setCategory(props.name)}>
       {props.name}
       <span className="catCount"> {props.count}</span>
     </div>

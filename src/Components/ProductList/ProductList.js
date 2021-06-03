@@ -5,16 +5,17 @@ import './ProductList.css';
 function ProductList(props) {
   return (
     <div className="ProductList">
-      {data.filter((product) => {
-        const { filter } = props
-        // If the product category is in the filter list
-        if (filter.includes(product.category) || filter.includes('All')) {
-          return product
-        }
-        return null
-      }).map((product, index) => {
-        return <Product key={index} name={product.name} price={product.price} category={product.category} ></Product>
-      })}
+      {
+        data.filter((product) => {
+          // Is the product's category currently selected
+          if (props.filter.includes(product.category) || props.filter.includes('All')) {
+            return product
+          }
+          return null
+        }).map((product, index) => {
+          return <Product key={index} name={product.name} price={product.price} category={product.category} ></Product>
+        })
+      }
     </div>
   );
 }
