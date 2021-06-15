@@ -4,13 +4,14 @@ import './Product.css';
 
 function Product(props) {
   const dispatch = useDispatch()
+  const { name, price, id, category } = props.product
 
   return (
     <div className="Product">
-      <h2>{props.name}</h2>
-      <h4>{props.price}</h4>
-      <p>{props.category}</p>
-      <div className="addToCartButton" onClick={() => dispatch(addToCart(props.index))}>Add To Cart</div>
+      <h2>{name}</h2>
+      <h4>{price}</h4>
+      <p>{category}</p>
+      <div className="addToCartButton" onClick={() => dispatch(addToCart(id - 1))}>Add To Cart</div>
     </div>
   );
 }
