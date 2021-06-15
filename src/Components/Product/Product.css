@@ -4,4 +4,21 @@
   padding: 50px 20px;
   width: 300px;
   background-color: rgb(77, 77, 77);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.addToCartButton {
+  margin-top: 20px;
+  width: 150px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: gray;
+  color: white;
+}
+
+.addToCartButton:hover {
+  background-color: darkcyan;
 }

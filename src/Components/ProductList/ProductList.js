@@ -13,7 +13,7 @@ function ProductList(props) {
           }
           return null
         }).map((product, index) => {
-          return <Product key={index} name={product.name} price={product.price} category={product.category} ></Product>
+          return <Product key={index} name={product.name} price={product.price} category={product.category} index={index} ></Product>
         })
       }
     </div>
