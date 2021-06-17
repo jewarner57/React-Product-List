@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { removeFromCart, clearFromCart } from '../../actions';
+import { addToCart, removeFromCart, clearFromCart } from '../../actions';
 import './ShoppingCartItem.css'
 
 function ShoppingCartItem(props) {
@@ -10,6 +10,7 @@ function ShoppingCartItem(props) {
   return (
     <div className="ShoppingCartItem">
       <p>{name} x {props.qty} = {total}</p>
+      <div onClick={() => dispatch(addToCart(id))} className="cartButton addToCart">+</div>
       <div onClick={() => dispatch(removeFromCart(id))} className="cartButton removeFromCart">-</div>
       <div onClick={() => dispatch(clearFromCart(id))} className="cartButton clearFromCart">X</div>
     </div>

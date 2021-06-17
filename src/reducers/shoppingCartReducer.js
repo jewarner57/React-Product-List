@@ -33,7 +33,7 @@ const shoppingCartReducer = (state = [], action) => {
       const cartForClearing = state
 
       return cartForClearing.filter((item) => {
-        return !item.id === action.payload.id ? true : false
+        return item.id === action.payload.id ? false : true
       })
 
     default:
