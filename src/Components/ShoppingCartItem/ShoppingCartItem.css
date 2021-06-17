@@ -1,0 +1,24 @@
+.ShoppingCartItem {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.cartButton {
+  
+  color: white;
+  margin: 5px 0 5px 10px;
+  border-radius: 10px;
+}
+
+.removeFromCart {
+  padding: 5px 10px;
+  background-color: rgb(66, 138, 197);
+}
+
+.clearFromCart {
+  padding: 5px 8px;
+  background-color: rgb(212, 83, 83);
+}

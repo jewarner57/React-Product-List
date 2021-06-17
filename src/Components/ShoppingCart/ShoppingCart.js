@@ -1,14 +1,19 @@
 import data from '../../data'
 import { useSelector } from 'react-redux'
+import ShoppingCartItem from '../ShoppingCartItem/ShoppingCartItem'
 
 function ShoppingCart() {
   const cart = useSelector(state => state.shoppingCart)
-  const items = cart.map(item => <p key={item} >{data[item].name}</p>)
 
   return (
     <div>
       <h3>Shopping Cart:</h3>
-      {items}
+      {
+        cart.map((item) => {
+          const itemData = data[item.id - 1]
+          return <ShoppingCartItem key={item.id} item={itemData} qty={item.qty} ></ShoppingCartItem>
+        })
+      }
     </div>
   )
 }

@@ -11,7 +11,7 @@ function Product(props) {
       <h2>{name}</h2>
       <h4>{price}</h4>
       <p>{category}</p>
-      <div className="addToCartButton" onClick={() => dispatch(addToCart(id - 1))}>Add To Cart</div>
+      <div className="addToCartButton" onClick={() => dispatch(addToCart(id))}>Add To Cart</div>
     </div>
   );
 }
