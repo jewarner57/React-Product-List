@@ -1,4 +1,4 @@
-import { ADD_TO_CART, REMOVE_FROM_CART, CLEAR_FROM_CART } from "../actions";
+import { ADD_TO_CART, REMOVE_FROM_CART, CLEAR_FROM_CART, SET_CART_QUANTITY } from "../actions";
 
 const shoppingCartReducer = (state = [], action) => {
   switch (action.type) {
@@ -35,6 +35,15 @@ const shoppingCartReducer = (state = [], action) => {
       return cartForClearing.filter((item) => {
         return item.id === action.payload.id ? false : true
       })
+
+    case SET_CART_QUANTITY:
+      for (let i = 0; i < state.length; i += 1) {
+        if (state[i].id === action.payload.id) {
+          state[i].qty = action.payload.amount
+          return [...state]
+        }
+      }
+      return state
 
     default:
       return state
